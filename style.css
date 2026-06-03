@@ -1,0 +1,355 @@
+/* === TecherBoard 共通スタイル === */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --blue-50:  #E6F1FB;
+    --blue-100: #B5D4F4;
+    --blue-400: #378ADD;
+    --blue-600: #185FA5;
+    --blue-800: #0C447C;
+    --green-50:  #EAF3DE;
+    --green-100: #C0DD97;
+    --green-400: #639922;
+    --green-600: #3B6D11;
+    --green-800: #27500A;
+    --gray-50:  #F1EFE8;
+    --gray-100: #D3D1C7;
+    --gray-400: #888780;
+    --gray-600: #5F5E5A;
+    --gray-800: #444441;
+    --red-400:  #E24B4A;
+    --white: #ffffff;
+    --radius: 8px;
+    --radius-lg: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
+    background-color: var(--blue-50);
+    color: var(--gray-800);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* === ヘッダー === */
+.site-header {
+    background: var(--blue-600);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+}
+
+.site-title span {
+    color: var(--blue-100);
+}
+
+.site-meta {
+    font-size: 0.85rem;
+    color: var(--blue-100);
+}
+
+/* === メインコンテナ === */
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* === カード === */
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 0.5px solid var(--blue-100);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blue-800);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--blue-50);
+}
+
+/* === フォーム === */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    border: 0.5px solid var(--gray-100);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--gray-800);
+    background: var(--white);
+    transition: border-color 0.2s;
+    margin-bottom: 0.75rem;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--blue-400);
+    box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* === ラジオボタン === */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    border: 0.5px solid var(--gray-100);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.radio-group label:hover {
+    border-color: var(--blue-400);
+    background: var(--blue-50);
+}
+
+.radio-group input[type="radio"]:checked + span {
+    color: var(--blue-600);
+    font-weight: 500;
+}
+
+/* === ボタン === */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--blue-600);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--blue-800);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--blue-600);
+    border: 0.5px solid var(--blue-400);
+}
+
+.btn-secondary:hover {
+    background: var(--blue-50);
+}
+
+.btn-danger {
+    background: var(--white);
+    color: var(--red-400);
+    border: 0.5px solid var(--red-400);
+}
+
+.btn-danger:hover {
+    background: #FCEBEB;
+}
+
+/* === テーブル === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th {
+    background: var(--blue-600);
+    color: var(--white);
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 0.5px solid var(--gray-50);
+    color: var(--gray-800);
+}
+
+tr:hover td {
+    background: var(--blue-50);
+}
+
+/* === エラーメッセージ === */
+.error-msg {
+    color: var(--red-400);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: #FCEBEB;
+    border-radius: var(--radius);
+    border-left: 3px solid var(--red-400);
+}
+
+/* === バッジ（役職） === */
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.badge-manager {
+    background: var(--green-50);
+    color: var(--green-600);
+    border: 0.5px solid var(--green-100);
+}
+
+.badge-staff {
+    background: var(--blue-50);
+    color: var(--blue-600);
+    border: 0.5px solid var(--blue-100);
+}
+
+/* === 区切り線 === */
+.divider {
+    border: none;
+    border-top: 0.5px solid var(--gray-100);
+    margin: 1.5rem 0;
+}
+
+/* === ログインページ専用 === */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-50);
+    padding: 2rem;
+}
+
+.login-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 0.5px solid var(--blue-100);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.login-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-800);
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.login-logo span {
+    color: var(--blue-400);
+}
+
+.login-subtitle {
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+/* === マネージャーページ専用 === */
+body.manager {
+    background-color: var(--green-50);
+}
+
+body.manager .site-header {
+    background: var(--green-600);
+}
+
+body.manager .site-title span {
+    color: var(--green-100);
+}
+
+body.manager .card-title {
+    color: var(--green-800);
+    border-bottom-color: var(--green-50);
+}
+
+body.manager th {
+    background: var(--green-600);
+}
+
+body.manager input[type="text"]:focus,
+body.manager input[type="password"]:focus,
+body.manager textarea:focus {
+    border-color: var(--green-400);
+    box-shadow: 0 0 0 3px rgba(99, 153, 34, 0.1);
+}
+
+body.manager .btn-primary {
+    background: var(--green-600);
+}
+
+body.manager .btn-primary:hover {
+    background: var(--green-800);
+}
+
+body.manager .card {
+    border-color: var(--green-100);
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.col-detail {
+    min-width: 200px;
+}
+
