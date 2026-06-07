@@ -153,7 +153,7 @@
                         echo '<table>
                             <tr>
                                 <th class="nowrap">時期</th>
-                                <th class="nowrap">報告者</th>
+
                                 <th>種類</th>
                                 <th>詳細</th>
                                 <th>解決策</th>
@@ -161,7 +161,6 @@
                         foreach($results as $row){
                             echo '<tr>';
                             echo'<td class="nowrap">'.htmlspecialchars($row['formatted_date']).'</td>';
-                            echo '<td class="nowrap">'.htmlspecialchars($row['name']).'</td>';
                             echo '<td>'.htmlspecialchars($row['com_type']).'</td>';
                             echo '<td>'.htmlspecialchars($row['com_detail']).'</td>';
                             echo '<td>'.htmlspecialchars($row['FB']).'</td>';
